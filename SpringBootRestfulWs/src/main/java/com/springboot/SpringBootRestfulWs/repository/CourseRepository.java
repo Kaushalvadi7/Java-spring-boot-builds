@@ -41,7 +41,7 @@ public class CourseRepository {
         return jdbcTemplate.update(sql, course.getTitle(), course.getDescription(), course.getId());
     }
 
-    // Delete course by ID
+    // Delete course by ID 
     public int deleteCourse(Long id) {
         String sql = "DELETE FROM courses WHERE id = ?";
         return jdbcTemplate.update(sql, id);
