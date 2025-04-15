@@ -19,10 +19,10 @@ public interface CustomerMapper {
     @Select("<script>" +
     "SELECT id, first_name AS firstName, last_name AS lastName, email, city, state FROM Customer" +
     " WHERE 1=1" +
-    "<if test='firstName != null and firstName !\"\"'>" +
+    "<if test='firstName != null and firstName !=\"\"'>" +
     " AND first_name = #{firstName}" +
     "</if>" +
-    "<if test='lastName != null and lastName !\"\"'>" +
+    "<if test='lastName != null and lastName !=\"\"'>" +
     " AND last_name = #{lastName}" +
     "</if>" +
     "<if test='city != null and city != \"\"'>" +
